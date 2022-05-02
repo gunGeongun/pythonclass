@@ -34,3 +34,5 @@ class Poetry:
         self.printContents()
         self.printBlankLines()
         input("감상 끝났으면 아무거나 눌러라")
+    def getTitle(self):
+        return self.title

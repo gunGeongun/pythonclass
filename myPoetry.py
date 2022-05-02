@@ -1,15 +1,12 @@
 from Poetry import *
+from PoetryBook import *
 
-title = '진달래 꽃'
-poet='김소월'
-contents = '''
-시시시시시시 시시시시시시시시시시시시ㅍ
-시시시시시시시시시시시시시시시시시시시시시시
-시시시시시시시시시시시시
-시시시시시시시시시시시시시시
-시시시시시시시시시시시시시시시시시시시시
-시시시시시시시시시시
-'''
+menuTitle = '나의 애송시'
+menuContents = [Poetry.getTitle() for Poetry in myPoetryBook]
 
-myPoetry = Poetry(title,poet,contents.split('\n'))
-myPoetry.print()
+
+myPoetryBook[0].print()
+
+
+
+# menu.py ,  PoetryBook 이라는 객체를 하나 더만드는데 init(self)
