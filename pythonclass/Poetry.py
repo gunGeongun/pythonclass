@@ -1,3 +1,4 @@
+#시 출력 프로그램 (시 객체를 위한 클래스 Poetry.py) 1926005 2학년 김건 
 import os,sys,time
 
 class Poetry:
@@ -7,32 +8,20 @@ class Poetry:
         self.contents = contents
         self.consoleHeight = os.get_terminal_size().lines
         self.upSpeed = 0.5
-    def printCLS(self):
+    def print(self):
         print('\n'*self.consoleHeight)
-    def printTitle(self):
         print('\t\t\t' + self.title)
         time.sleep(self.upSpeed)
-    def printContents(self):
+        print()
+        time.sleep(self.upSpeed)
+        print('\t\t\t\t\t'+self.poet)
+        time.sleep(self.upSpeed)
         for content in self.contents:
             print('\t' + content)
             time.sleep(self.upSpeed)
-    def printPoet(self):
-        print('\t\t\t'+self.poet)
-        time.sleep(self.upSpeed)
-    def printBlankLines(self):
         for i in range(self.consoleHeight-len(self.contents)-7):
             print()
             time.sleep(self.upSpeed)
-    def print(self):
-        self.printCLS()
-        self.printTitle()
-        print()
-        time.sleep(self.upSpeed)
-        self.printContents()
-        print()
-        time.sleep(self.upSpeed)
-        self.printContents()
-        self.printBlankLines()
-        input("감상 끝났으면 아무거나 눌러라")
+        input("감상 끝났으면 아무키나 누르세요.")
     def getTitle(self):
         return self.title
